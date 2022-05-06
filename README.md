@@ -63,12 +63,35 @@ CIRCUIT DIAGRAM
 FIGURE -03
 
 
+![Screenshot 2022-05-06 154303](https://user-images.githubusercontent.com/75234790/167116277-b927eed9-467f-40ed-aaec-cf58af66c1b2.png)
 
 
 
 PROGRAM 
  
- 
+ const int BUTTON = 2;
+const int LED = 8;
+int BUTTONstate = 0;
+  
+void setup()
+{
+  pinMode(BUTTON, INPUT);
+  pinMode(LED, OUTPUT);
+}
+
+void loop()
+{
+  BUTTONstate = digitalRead(BUTTON);
+  if (BUTTONstate == HIGH)
+  {
+    digitalWrite(LED, HIGH);
+    delay(500);
+        digitalWrite(LED, LOW);
+    delay(500);
+
+  }   
+
+}    
  
  
  
@@ -78,4 +101,8 @@ PROGRAM
 Output of the simulation :
 
 [My image](username.github.com/repository/img/image.jpg)
+![Screenshot 2022-05-06 154303](https://user-images.githubusercontent.com/75234790/167117183-8e46595b-c0e0-49a0-948f-348d53df898e.png)
+
+
+
 
